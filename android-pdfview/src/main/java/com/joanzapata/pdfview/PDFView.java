@@ -19,10 +19,15 @@
 package com.joanzapata.pdfview;
 
 import android.content.Context;
-import android.graphics.*;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.Paint.Style;
+import android.graphics.PointF;
+import android.graphics.Rect;
+import android.graphics.RectF;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.util.AttributeSet;
 import android.view.SurfaceView;
 import com.joanzapata.pdfview.exception.FileNotFoundException;
@@ -31,6 +36,7 @@ import com.joanzapata.pdfview.listener.OnLoadCompleteListener;
 import com.joanzapata.pdfview.listener.OnPageChangeListener;
 import com.joanzapata.pdfview.model.PagePart;
 import com.joanzapata.pdfview.util.ArrayUtils;
+import com.joanzapata.pdfview.util.AsyncTask;
 import com.joanzapata.pdfview.util.Constants;
 import com.joanzapata.pdfview.util.FileUtils;
 import com.joanzapata.pdfview.util.NumberUtils;
